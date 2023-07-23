@@ -101,7 +101,7 @@ class Articulo extends ResourceController
                     'status'   => 201,
                     'error'    => null,
                     'messages' => [
-                        'success' => 'Se guardo correct'
+                        'success' => 'Se guardo correctamente'
                     ]
                 ];
                 return $this->respondCreated($response);

@@ -1,7 +1,17 @@
-# Front End
+# Front End Server Angular
 
-## Development server
+Comando para levantar proyecto: ng serve
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Back End Server
 
-# Back End
+Instalar MAMP (MAC) o laragon (windows)
+Entrar en a la carpeta MAMP, después entrar en la capeta htdocs y colocar la carpeta articulosApi.
+Levantar servicio MAMP o laragon.
+
+configurar puerto en caso de ser necesario, para configurar el puerto es en la carpeta articulosApi, app, config, app.php
+public string $baseURL = 'http://localhost:8888/articulosApi/public/';
+
+# Base de datos
+
+Utilice phpmyadmin
+http://localhost:8888/phpMyAdmin5/
