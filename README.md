@@ -12,6 +12,7 @@ Entrar en a la carpeta MAMP, después entrar en la capeta htdocs y colocar la ca
 Levantar servicio MAMP o laragon.
 
 Configurar puerto en caso de ser necesario, para configurar el puerto es en la carpeta articulosApi, app, config, app.php
+Cambiar nombre al archivo env a .env el cual se encuentra en la raiz del proyecto.
 public string $baseURL = 'http://localhost:8888/articulosApi/public/';
 
 # Base de datos
