@@ -1,5 +1,8 @@
 # Front End Server Angular
 
+Dentro de la carpeta frontend/articulos se necesita instalar.
+Comando para instalar dependencias: npm install
+Comandos para instalar bootstrap: npm install bootstrap
 Comando para levantar proyecto: ng serve
 
 # Back End Server
