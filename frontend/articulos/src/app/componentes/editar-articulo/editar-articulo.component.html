@@ -1,0 +1,73 @@
+<div class="text-center mb-3">
+  <h1>Editar articulo</h1>
+</div>
+<div class="card mb-3">
+  <div class="card-header">Actualizar datos</div>
+  <div class="card-body">
+    <form
+      ngNativeValidate
+      [formGroup]="formEditarArticulo"
+      (ngSubmit)="editarArticulo()"
+    >
+      <div class="mb-3">
+        <label for="codigo" class="form-label">Codigo</label>
+        <input
+          class="form-control"
+          type="text"
+          aria-label="Disabled input example"
+          name="codigo"
+          id="codigo"
+          formControlName="codigo"
+          [attr.disabled]="codigodisabled ? '' : null"
+          readonly
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          name="nombre"
+          id="nombre"
+          formControlName="nombre"
+          aria-describedby="helpId"
+          placeholder="Escribe el nombre..."
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="categoria" class="form-label">Categoria</label>
+        <input
+          type="text"
+          class="form-control"
+          name="categoria"
+          id="categoria"
+          formControlName="categoria"
+          aria-describedby="helpId"
+          placeholder="Escribe la categoria..."
+          required
+        />
+      </div>
+      <div class="card mb-3">
+        <div class="card-header">Caracteristicas</div>
+        <div class="card-body">
+          <app-caracteristicas-articulo></app-caracteristicas-articulo>
+        </div>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+        <button class="btn btn-outline-primary me-md-2" type="submit">
+          <i class="bi bi-pencil-square"></i> Actualizar datos
+        </button>
+        <button
+          type="button"
+          routerLink="/consultar-articulo"
+          class="btn btn-outline-secondary"
+        >
+          <i class="bi bi-x-circle"></i> Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

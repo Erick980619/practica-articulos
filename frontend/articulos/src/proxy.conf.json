@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "targe": "http://localhost:8888/",
+    "secure": false,
+    "pathRewrite": { "^/api": "" },
+    "changerOrigin": false,
+    "logLevel": "debug"
+  }
+}

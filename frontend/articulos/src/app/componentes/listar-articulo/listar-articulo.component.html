@@ -1,0 +1,48 @@
+<div class="card text-center">
+  <div class="card-header">Artículos</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let articulo of articulosLista; let fila = index">
+            <td (dblclick)="dobleClick(articulo.idArticulo)">
+              {{ articulo.codigo }}
+            </td>
+            <td (dblclick)="dobleClick(articulo.idArticulo)">
+              {{ articulo.nombre }}
+            </td>
+            <td (dblclick)="dobleClick(articulo.idArticulo)">
+              {{ articulo.categoria }}
+            </td>
+            <td>
+              <div class="d-flex gap-2 d-md-flex justify-content-md-center">
+                <a
+                  routerLink="/editar-articulo/{{ articulo.idArticulo }}"
+                  class="btn btn-outline-secondary"
+                  title="Editar artículo."
+                >
+                  <i class="bi bi-pencil-square"></i>
+                </a>
+                <a
+                  (click)="eliminarArticulo(articulo.idArticulo, fila)"
+                  class="btn btn-outline-danger"
+                  title="Eliminar artículo."
+                >
+                  <i class="bi bi-x-circle-fill"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

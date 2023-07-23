@@ -1,0 +1,66 @@
+<div class="text-center mb-3">
+  <h1>Agregar artículo</h1>
+</div>
+<div class="card mb-3">
+  <div class="card-header">Agregar</div>
+  <div class="card-body">
+    <form
+      ngNativeValidate
+      [formGroup]="formAgregarArticulo"
+      (ngSubmit)="agregarArticulo()"
+    >
+      <div class="mb-3">
+        <label for="addCodigo" class="form-label">Código</label>
+        <input
+          type="text"
+          class="form-control"
+          name="addCodigo"
+          id="addCodigo"
+          formControlName="codigo"
+          aria-describedby="helpId"
+          placeholder="Ingresa el código..."
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="addNombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          name="addNombre"
+          id="addNombre"
+          formControlName="nombre"
+          aria-describedby="helpId"
+          placeholder="Escribe el nombre..."
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="addCategoria" class="form-label">Categoria</label>
+        <input
+          type="text"
+          class="form-control"
+          name="addCategoria"
+          id="addCategoria"
+          formControlName="categoria"
+          aria-describedby="helpId"
+          placeholder="Escribe la categoría..."
+          required
+        />
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+        <button class="btn btn-outline-success me-md-2" type="submit">
+          <i class="bi bi-save"></i> Guardar
+        </button>
+        <button
+          type="button"
+          routerLink="/listar-articulo"
+          class="btn btn-outline-secondary"
+        >
+          <i class="bi bi-x-circle"></i> Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

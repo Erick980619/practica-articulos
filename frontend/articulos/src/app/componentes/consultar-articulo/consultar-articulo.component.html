@@ -1,0 +1,72 @@
+<div class="text-center mb-3">
+  <h1>Lista de artículos</h1>
+</div>
+<div class="card mb-3">
+  <div class="card-header">Consultar</div>
+  <div class="card-body">
+    <form [formGroup]="formConsultarArticulo" (ngSubmit)="consultarArticulo()">
+      <div class="mb-3">
+        <label for="codigoConsultar" class="form-label">Código</label>
+        <input
+          type="text"
+          class="form-control"
+          name="codigoConsultar"
+          id="codigoConsultar"
+          aria-describedby="helpId"
+          title="Ingresa el código del artículo.."
+          placeholder="Ingresa el código del artículo..."
+          formControlName="codigoConsultar"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="nombreConsultar" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          name="nombreConsultar"
+          id="nombreConsultar"
+          aria-describedby="helpId"
+          title="Escribe el nombre del artículo..."
+          placeholder="Escribe el nombre del artículo..."
+          formControlName="nombreConsultar"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="categoriaConsultar">Categoría</label>
+        <select
+          title="Seleccina una categoría."
+          id="categoriaConsultar"
+          formControlName="categoriaConsultar"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected value="null">Selecciona una categoría...</option>
+          <option
+            *ngFor="let categoria of categorias"
+            [value]="categoria.categoria"
+          >
+            {{ categoria.categoria }}
+          </option>
+        </select>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+        <button
+          class="btn btn-primary me-md-2"
+          title="Buscar articulos."
+          type="submit"
+        >
+          Buscar
+        </button>
+        <button
+          class="btn btn-secondary"
+          title="Limpiar formulario."
+          type="reset"
+        >
+          Limpiar formulario
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-listar-articulo [articulosLista]="articulos"> </app-listar-articulo>
